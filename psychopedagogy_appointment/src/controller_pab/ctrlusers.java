@@ -38,7 +38,7 @@ public class ctrlusers implements ActionListener{
 		if(e.getSource() == login_v.loginButton)
 		{
 			/*
-			 *		Validación de login y password 
+			 *		Falta validación de login y password 
 			 * */
 			userx.setLogin(login_v.userTextField.getText());
 			String myPass=String.valueOf(login_v.passwordField.getPassword());

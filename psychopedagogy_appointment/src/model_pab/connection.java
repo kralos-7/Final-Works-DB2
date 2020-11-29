@@ -6,6 +6,9 @@ import java.sql.SQLException;
 
 public class connection {
 
+	/*
+	 *    Información de mi cuenta en MariaDB/XAMPP
+	 * */
 	private final String base = "psychopedagogy_appointment_book";
 	private final String user = "kralos";
 	private final String password = "YHpHOCH4WJpeMc47";
