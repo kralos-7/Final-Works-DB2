@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2020 at 02:48 AM
+-- Generation Time: Dec 02, 2020 at 06:48 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -30,7 +30,6 @@ USE `psychopedagogy_appointment_book`;
 -- Table structure for table `administrator`
 --
 
-DROP TABLE IF EXISTS `administrator`;
 CREATE TABLE `administrator` (
   `_idTrabajador` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
   `_nombre` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
@@ -45,13 +44,14 @@ CREATE TABLE `administrator` (
 -- Table structure for table `appointment`
 --
 
-DROP TABLE IF EXISTS `appointment`;
 CREATE TABLE `appointment` (
   `_idCita` int(11) NOT NULL,
   `_idPaciente` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `_idEspecialista` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `_asunto` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `_fecha` date NOT NULL,
-  `_hora` time NOT NULL,
+  `_hora_inicio` time NOT NULL,
+  `_hora_termino` time NOT NULL,
   `_estatus` varchar(15) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -61,7 +61,6 @@ CREATE TABLE `appointment` (
 -- Table structure for table `student`
 --
 
-DROP TABLE IF EXISTS `student`;
 CREATE TABLE `student` (
   `_matricula` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
   `_nombre` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
@@ -79,7 +78,6 @@ CREATE TABLE `student` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `_idUser` int(11) NOT NULL,
   `_login` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
